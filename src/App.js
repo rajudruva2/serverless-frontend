@@ -4,7 +4,7 @@ import Cart from "./components/Cart";
 import "./App.css";
 
 const products = [
-  { id: 1, name: "T-Shirt", price: 20, image: "https://via.placeholder.com/150" },
+  { id: 1, name: "T-Shirt", price: 20, image: "Pictures/jeans.jpg" },
   { id: 2, name: "Jeans", price: 40, image: "https://via.placeholder.com/150" },
   { id: 3, name: "Jacket", price: 60, image: "https://via.placeholder.com/150" },
 ];
