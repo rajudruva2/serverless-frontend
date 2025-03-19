@@ -3,10 +3,15 @@ import Product from "./components/Product";
 import Cart from "./components/Cart";
 import "./App.css";
 
+// Import images
+import jeansImage from "./assets/jeans.jpg"; 
+import tshirtImage from "./assets/tshirt.jpg"; 
+import sareeImage from "./assets/saree.jpg";
+
 const products = [
-  { id: 1, name: "T-Shirt", price: 20, image: "Pictures/jeans.jpg" },
-  { id: 2, name: "Jeans", price: 40, image: "https://via.placeholder.com/150" },
-  { id: 3, name: "Jacket", price: 60, image: "https://via.placeholder.com/150" },
+  { id: 1, name: "T-Shirt", price: 20, image: tshirtImage },
+  { id: 2, name: "Jeans", price: 40, image: jeansImage },
+  { id: 3, name: "Jacket", price: 60, image: sareeImage },
 ];
 
 function App() {
