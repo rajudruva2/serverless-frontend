@@ -1,4 +1,4 @@
-// src/components/Product.js
+
 import React from "react";
 
 function Product({ product, addToCart }) {

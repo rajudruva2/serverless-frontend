@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from "react";
 import Product from "./components/Product";
 import Cart from "./components/Cart";
