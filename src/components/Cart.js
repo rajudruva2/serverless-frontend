@@ -8,7 +8,7 @@ function Cart({ cart, removeFromCart }) {
       {cart.map((item) => (
         <div key={item.id} className="cart-item">
           <h3>{item.name}</h3>
-          <p>${item.price}</p>
+          <p>{item.name} - ₹{item.price}</p>  {/* Changed $ to ₹ */}
           <button onClick={() => removeFromCart(item.id)}>Remove</button>
         </div>
       ))}
