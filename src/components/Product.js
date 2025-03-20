@@ -6,7 +6,7 @@ function Product({ product, addToCart }) {
     <div className="product">
       <img src={product.image} alt={product.name} />
       <h2>{product.name}</h2>
-      <p>${product.price}</p>
+      <p>rupee {product.price}</p> {/* Changed $ to "rupee" */}
       <button onClick={() => addToCart(product)}>Add to Cart</button>
     </div>
   );
