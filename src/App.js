@@ -11,7 +11,7 @@ import sareeImage from "./assets/saree.jpg";
 const products = [
   { id: 1, name: "T-Shirt", price: 299, image: tshirtImage },
   { id: 2, name: "Jeans", price: 499, image: jeansImage },
-  { id: 3, name: "Jacket", price: 1, image: sareeImage },
+  { id: 3, name: "yellow-Tshirt", price: 1, image: sareeImage },
 ];
 
 function App() {
