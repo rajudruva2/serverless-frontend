@@ -7,11 +7,13 @@ import "./App.css";
 import jeansImage from "./assets/jeans.jpg"; 
 import tshirtImage from "./assets/tshirt.jpg"; 
 import sareeImage from "./assets/saree.jpg";
+import pf1 from "./assets/photo-frame-1.jpg";
 
 const products = [
   { id: 1, name: "T-Shirt", price: 299, image: tshirtImage },
-  { id: 2, name: "photoframe", price: 499, image: jeansImage },
+  { id: 2, name: "photo-frame1", price: 499, image: jeansImage },
   { id: 3, name: "yellow-Tshirt", price: 1, image: sareeImage },
+  { id: 3, name: "photo-frame2", price: 1, image:pf1 },
 ];
 
 function App() {
