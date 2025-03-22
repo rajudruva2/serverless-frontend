@@ -1,9 +1,9 @@
 
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom"; // ADDED LINE
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Product from "./components/Product";
 import Cart from "./components/Cart";
-import ProfilePage from "./pages/ProfilePage"; // ADDED LINE
+import ProfilePage from "./pages/ProfilePage";
 import "./App.css";
 
 // Import images
@@ -33,16 +33,16 @@ function App() {
   };
 
   return (
-    <Router> {/* ADDED LINE */}
+    <Router>
       <div className="App">
-        <nav> {/* ADDED LINES */}
+        <nav>
           <ul>
-            <li><Link to="/">Home</Link></li> {/* ADDED LINE */}
-            <li><Link to="/profile">Profile</Link></li> {/* ADDED LINE */}
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/profile">Profile</Link></li>
           </ul>
-        </nav> {/* ADDED LINE */}
+        </nav>
 
-        <Routes> {/* ADDED LINE */}
+        <Routes>
           {/* Store Page */}
           <Route
             path="/"
@@ -60,13 +60,22 @@ function App() {
             }
           />
 
-          {/* Profile Page - ADDED LINE */}
-          <Route path="/profile" element={<ProfilePage />} /> {/* ADDED LINE */}
-        </Routes> {/* ADDED LINE */}
+          {/* Profile Page - ADDED CONDITIONAL NAVIGATION */}
+          <Route
+            path="/profile"
+            element={
+              <>
+                <h1>Profile Page</h1>
+                <ProfilePage />
+              </>
+            }
+          />
+        </Routes>
       </div>
-    </Router> {/* ADDED LINE */}
+    </Router>
   );
 }
 
 export default App;
+
 
