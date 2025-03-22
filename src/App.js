@@ -12,7 +12,7 @@ import pf1 from "./assets/photo-frame-1.jpg";import photo2h from "./assets/photo
 const products = [
   { id: 1, name: "T-Shirt", price: 299, image: tshirtImage },
   { id: 2, name: "photo-frame1", price: 499, image: jeansImage },
-  { id: 3, name: "yellow-Tshirt", price: 100, image: sareeImage },
+  { id: 3, name: "yellow-Tshirt Pant free", price: 1, image: sareeImage },
   { id: 5, name: "photo-frame2", price: 5000, image:pf1 },{ id: 4, name: "premium-dress", price: 100000, image:photo2h },
 ];
 
