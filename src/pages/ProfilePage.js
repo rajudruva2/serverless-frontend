@@ -6,7 +6,7 @@ const ProfilePage = () => {
   const [profile, setProfile] = useState({ phone: "", address: "", email: "" });
 
   useEffect(() => {
-    axios.get("/api/profile", {
+    axios.get("http://backend-app:8080/api/profile", {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     })
     .then(response => setProfile(response.data))
@@ -19,7 +19,7 @@ const ProfilePage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("/api/profile", profile, {
+    axios.post("http://backend-app:8080/api/profile", profile, {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     })
     .then(response => setProfile(response.data))

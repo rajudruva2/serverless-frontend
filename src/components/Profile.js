@@ -11,7 +11,7 @@ const Profile = () => {
 
   // Fetch user data from backend API
   useEffect(() => {
-    fetch("http://localhost:8080/api/user/profile", {
+    fetch("http://backend-app:8080/api/user/profile", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +30,7 @@ const Profile = () => {
 
   // Save updated user data
   const handleSave = () => {
-    fetch("http://localhost:8080/api/user/profile", {
+    fetch("http://backend-app:8080/api/user/profile", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
