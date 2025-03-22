@@ -1,19 +1,24 @@
+
 import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom"; // ADDED LINE
 import Product from "./components/Product";
 import Cart from "./components/Cart";
+import ProfilePage from "./pages/ProfilePage"; // ADDED LINE
 import "./App.css";
 
 // Import images
-import jeansImage from "./assets/jeans.jpg"; 
-import tshirtImage from "./assets/tshirt.jpg"; 
+import jeansImage from "./assets/jeans.jpg";
+import tshirtImage from "./assets/tshirt.jpg";
 import sareeImage from "./assets/saree.jpg";
-import pf1 from "./assets/photo-frame-1.jpg";import photo2h from "./assets/photo2h.jpg";
+import pf1 from "./assets/photo-frame-1.jpg";
+import photo2h from "./assets/photo2h.jpg";
 
 const products = [
   { id: 1, name: "T-Shirt", price: 299, image: tshirtImage },
   { id: 2, name: "photo-frame1", price: 499, image: jeansImage },
   { id: 3, name: "yellow-Tshirt", price: 100, image: sareeImage },
-  { id: 5, name: "photo-frame2", price: 5000, image:pf1 },{ id: 4, name: "premium-dress", price: 100000, image:photo2h },
+  { id: 5, name: "photo-frame2", price: 5000, image: pf1 },
+  { id: 4, name: "premium-dress", price: 100000, image: photo2h },
 ];
 
 function App() {
@@ -28,17 +33,40 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Online Clothing Store</h1>
-      <div className="products">
-        {products.map((product) => (
-          <Product key={product.id} product={product} addToCart={addToCart} />
-        ))}
+    <Router> {/* ADDED LINE */}
+      <div className="App">
+        <nav> {/* ADDED LINES */}
+          <ul>
+            <li><Link to="/">Home</Link></li> {/* ADDED LINE */}
+            <li><Link to="/profile">Profile</Link></li> {/* ADDED LINE */}
+          </ul>
+        </nav> {/* ADDED LINE */}
+
+        <Routes> {/* ADDED LINE */}
+          {/* Store Page */}
+          <Route
+            path="/"
+            element={
+              <>
+                <h1>Online Clothing Store</h1>
+                <div className="products">
+                  {products.map((product) => (
+                    <Product key={product.id} product={product} addToCart={addToCart} />
+                  ))}
+                </div>
+                <Cart cart={cart} removeFromCart={removeFromCart} />
+                <button className="checkout">Checkout</button>
+              </>
+            }
+          />
+
+          {/* Profile Page - ADDED LINE */}
+          <Route path="/profile" element={<ProfilePage />} /> {/* ADDED LINE */}
+        </Routes> {/* ADDED LINE */}
       </div>
-      <Cart cart={cart} removeFromCart={removeFromCart} />
-      <button className="checkout">Checkout</button>
-    </div>
+    </Router> {/* ADDED LINE */}
   );
 }
 
 export default App;
+
